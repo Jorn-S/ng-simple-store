@@ -1,0 +1,4 @@
+export class <%= classify(name) %>State {
+  // create one or more readonly properties for your state. i.e.
+  // readonly todos: Todo[] = [];
+}

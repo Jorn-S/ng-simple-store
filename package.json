@@ -1,0 +1,39 @@
+{
+  "name": "ng-simple-store",
+  "version": "0.0.1",
+  "author": "Jorn Schalkwijk",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jschalkwijk/ng-simple-store/issues"
+  },
+  "homepage": "https://github.com/jschalkwijk/ng-simple-store#readme",
+  "scripts": {
+    "build": "..\\..\\node_modules\\.bin\\tsc -p tsconfig.schematics.json",
+    "copy:schemas": "cp --parents schematics\\/*/\\schema.json ..\\..\\dist\\ng-simple-store\\",
+    "copy:files": "cp --parents -p schematics\\/*/\\files\\/** -r ..\\..\\dist\\ng-simple-store\\",
+    "copy:collection": "cp schematics\\collection.json ..\\..\\dist\\ng-simple-store\\schematics\\collection.json",
+    "postbuild": "npm run copy:schemas && npm run copy:files && npm run copy:collection",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "schematics": "./schematics/collection.json",
+  "peerDependencies": {
+    "@angular/common": "^10.1.6",
+    "@angular/core": "^10.1.6",
+    "rxjs": "^6.6.3"
+  },
+  "dependencies": {
+    "tslib": "^2.0.0"
+  },
+  "description": "A simple Angular state management service for small projects",
+  "main": "karma.conf.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jschalkwijk/ng-simple-store.git"
+  },
+  "keywords": [
+    "angular",
+    "state",
+    "store",
+    "statemanegement"
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "$schema": "../../../node_modules/@angular-devkit/schematics/collection-schema.json",
+  "schematics": {
+    "store": {
+      "description": "Generates a new store and state",
+      "factory": "./store/index#StoreService",
+      "schema": "./store/schema.json"
+    }
+  }
+}

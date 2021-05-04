@@ -1,0 +1,12 @@
+import { Injectable } from '@angular/core';
+import { Store } from '@jorns/ng-simple-store';
+import { <%= classify(name) %>State } from '<%= classify(path) %>';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class <%= classify(name) %>Store extends Store<<%= classify(name) %>State> {
+  constructor(){
+    super(new <%= classify(name) %>State());
+  }
+}
